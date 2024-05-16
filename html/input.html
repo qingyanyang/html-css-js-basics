@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit-feedback" method="post">
+        <h2>User Feedback</h2>
+
+        <!-- Input fields for name and email -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Textarea for feedback message -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" cols="33" required>
+        </textarea>
+        <br><br>
+
+        <!-- Submission button -->
+        <button type="submit">Send Feedback</button>
+    </form>
+
+    <form action="/submit" method="post">
+    <label for="color">Choose a color:</label>
+    <input type="color" id="color" name="color">
+    <br><br>
+
+    <label for="date">Enter a date:</label>
+    <input type="date" id="date" name="date">
+    <br><br>
+
+    <label for="file">Upload file:</label>
+    <input type="file" id="file" name="file">
+    <br><br>
+
+    <label for="range">Adjust the range:</label>
+    <input type="range" id="range" name="range" min="0" max="100">
+    <br><br>
+
+    <label for="search">Search:</label>
+    <input type="search" id="search" name="search">
+    <br><br>
+
+    <label for="time">Choose a time:</label>
+    <input type="time" id="time" name="time">
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+<button type="reset">Reset Form</button>
+<button type="submit">Submit Form</button>
+<button onclick="location.href='https://www.example.com'">Go to Example.com</button>
+
+ 
+</body>
+</html>

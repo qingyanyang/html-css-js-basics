@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Table Example</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        caption {
+            font-size: 1.5em;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <caption>Employee Attendance Record</caption>
+        <colgroup>
+            <col span="1" style="background-color: yellow">
+            <col span="1">
+            <col span="2" style="background-color: lightblue">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Days Present</th>
+                <th>Days Absent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>Marketing</td>
+                <td>20</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td rowspan="2">Sales</td>
+                <td>18</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Emily Johnson</td>
+                <td>22</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center;">Break</td>
+            </tr>
+            <tr>
+                <td>Mike Brown</td>
+                <td>IT</td>
+                <td>24</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Total Employees</td>
+                <td colspan="2" style="text-align:right;">4</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
