@@ -61,6 +61,31 @@
 <button type="submit">Submit Form</button>
 <button onclick="location.href='https://www.example.com'">Go to Example.com</button>
 
- 
+ <form action="/search" method="get">
+    <input type="text" name="query" placeholder="Search..." autocomplete="on">
+    <button type="submit">Search</button>
+</form>
+
+<form action="/submit-car" method="post">
+    <label for="carSelect">Choose a car model:</label>
+    <select id="carSelect" name="car">
+        <optgroup label="Electric">
+            <option value="tesla_model_s">Tesla Model S</option>
+            <option value="nissan_leaf">Nissan Leaf</option>
+            <option value="chevy_bolt">Chevy Bolt</option>
+        </optgroup>
+        <optgroup label="Gasoline">
+            <option value="honda_accord">Honda Accord</option>
+            <option value="toyota_camry">Toyota Camry</option>
+            <option value="ford_fusion">Ford Fusion</option>
+        </optgroup>
+        <optgroup label="Hybrid">
+            <option value="toyota_prius" disabled>Toyota Prius (Unavailable)</option>
+            <option value="ford_escape_hybrid">Ford Escape Hybrid</option>
+        </optgroup>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+
 </body>
 </html>
