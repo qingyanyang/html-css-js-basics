@@ -1,0 +1,26 @@
+/* 设置float, 会浮动在父元素内  */
+/* .clear {
+    clear: both;
+} */
+
+.box {
+    /* overflow: hidden; */
+    width: 600px;
+    height: 400px;
+    background-color: aquamarine;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+    width: 200px;
+    height: 400px;
+    background-color: blue;
+}
+
+.right {
+    float: left;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(255, 0, 187);
+}

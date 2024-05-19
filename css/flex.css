@@ -1,0 +1,15 @@
+.parent {
+    display: flex;
+    margin: 0 auto;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 20px;
+    background-color: aquamarine;
+}
+
+.child {
+    width: 200px;
+    height: 50px;
+    background-color: blueviolet;
+}

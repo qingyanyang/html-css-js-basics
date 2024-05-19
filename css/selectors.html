@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./selector.css">
+</head>
+<body>
+    
+Certainly! Here’s a summary of CSS selectors in English, covering the different types and their primary uses:
+
+1. Basic Selectors
+
+Universal Selector (*)
+* {
+    margin:0;
+    padding:0;
+}
+
+Type Selector 
+div { color: blue; }
+
+Class Selector 
+.classname { background: yellow; }
+
+ID Selector
+#header { height: 100px; }
+
+Attribute Selector
+input[type="text"] { border: 1px solid grey; }
+
+2. Combinator Selectors
+
+Descendant Selector (A B)
+    Selects all B elements inside A.
+    Example: 
+    <div>
+        *<p>First paragraph in the div.</p>
+        <section>
+            *<p>Second paragraph nested inside a section inside the div.</p>
+        </section>
+    </div>
+    div p {
+        margin-left: 20px;
+        color: blue;
+    }
+
+
+Child Selector (A > B)
+    Selects direct children B of element A.
+    Example: 
+    <ul>
+        *<li>List item directly in the ul.</li>
+        *<li>
+            <ol>
+                <li>Nested list item inside an ol inside a li.</li>
+            </ol>
+        </li>
+    </ul>
+    
+    ul > li {
+        list-style-type: none;
+        color: green;
+    }
+
+Adjacent Sibling Selector (A + B)
+    Selects the first sibling B that directly follows A.
+    Example: 
+    <h1>Title</h1>
+    *<p>First paragraph after the title.</p>
+    <p>Second paragraph after the title.</p>
+
+    h1 + p {
+        margin-top: 0;
+        color: red;
+    }
+
+General Sibling Selector (A ~ B)
+    Selects all siblings B that follow A.
+    Example:
+    <h1>Heading</h1>
+    *<p>First paragraph after the heading.</p>
+    *<p>Second paragraph after the heading.</p>
+
+    h1 ~ p {
+        color: red;
+    }
+
+3. Pseudo-class Selectors
+
+Dynamic pseudo-classes: :hover, :focus, :active
+
+different between focus and active: 
+
+Example: a:hover { color: red; }
+
+Structural pseudo-classes: :first-child, :last-child, :nth-child(n)
+Example: li:first-child { font-weight: bold; }
+
+Form pseudo-classes: :checked, :disabled
+Example: input:checked { border: 1px solid green; }
+
+4. Pseudo-element Selectors
+
+::before and ::after
+Adds content before or after the element’s content.
+Example: p::before { content: "Note: "; font-weight: bold; }
+
+<div class="tooltip">Hover over me!</div>
+
+
+::first-line and ::first-letter
+Selects the first line or letter of a paragraph.
+Example: p::first-letter { font-size: 200%; }
+
+5. Attribute Selectors
+
+Presence and value attribute selectors
+Example: a[href="https://www.example.com"] { color: green; }
+Selects elements with a specific attribute value.
+
+</body>
+</html>

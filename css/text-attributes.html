@@ -1,0 +1,60 @@
+CSS 中关于文本（text）的属性非常丰富，它们可以控制文本的对齐、颜色、间距、装饰、变换等方面。这些属性使得我们能够精确地控制网页上的文本显示方式，以符合设计要求。以下是一些常用的CSS文本属性及其用途：
+
+1. color
+控制文本的颜色。
+示例：color: #333; 或 color: red;
+2. font-family
+设置文本的字体系列。
+示例：font-family: 'Arial', sans-serif;
+3. font-size
+设置文本的字体大小。
+示例：font-size: 16px; 或 font-size: 1rem;
+4. font-weight
+控制字体的粗细。
+示例：font-weight: bold; 或 font-weight: 700;
+5. font-style
+字体风格，常用于设置斜体。
+示例：font-style: italic;
+6. text-align
+设置文本的水平对齐方式。
+示例：text-align: left;、text-align: center;、text-align: right;、text-align: justify;
+7. line-height
+设置行高，影响文本的垂直间距。
+示例：line-height: 1.5; 或 line-height: 20px;
+8. text-decoration
+用于添加或移除文本的装饰（如下划线、上划线、删除线）。
+示例：text-decoration: underline;、text-decoration: line-through;
+9. text-transform
+控制文本的大小写。
+示例：text-transform: uppercase;（大写）、text-transform: lowercase;（小写）、text-transform: capitalize;（首字母大写）
+10. letter-spacing
+控制字符之间的间距。
+示例：letter-spacing: 2px;
+11. word-spacing
+控制单词之间的空间。
+示例：word-spacing: 4px;
+12. text-shadow
+给文本添加阴影效果。
+示例：text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+13. text-overflow
+控制文本溢出容器时的显示方式，通常与 white-space: nowrap; 和 overflow: hidden; 结合使用来显示省略号。
+示例：text-overflow: ellipsis;
+14. white-space
+控制元素内空白的处理方式，以及如何处理换行。
+示例：white-space: nowrap;（阻止文本换行）
+
+p {
+    color: darkblue;
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.6;
+    text-decoration: underline;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    text-shadow: 1px 1px 2px gray;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

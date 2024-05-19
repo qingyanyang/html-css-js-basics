@@ -1,0 +1,17 @@
+.test {
+    background-color: aqua;
+}
+
+.text-center {
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 80px;
+    height: 30px;
+    background-color: aqua;
+    overflow: hidden;
+}

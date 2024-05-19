@@ -1,0 +1,49 @@
+.transition-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: background-color 2s ease-in-out;
+}
+
+.transition-box:hover {
+    background-color: blue;
+}
+
+.transform-box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transition: transform 0.5s linear;
+}
+
+.transform-box:hover {
+    transform: rotate(45deg) scale(1.5);
+}
+
+@keyframes identifier {
+    0% {
+        background-color: yellow;
+        left: 0;
+        top: 0;
+    }
+
+    50% {
+        background-color: orange;
+        left: 200px;
+        top: 0;
+    }
+
+    100% {
+        background-color: yellow;
+        left: 0;
+        top: 0;
+    }
+}
+
+.animation-box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: yellow;
+    animation: identifier 5s infinite;
+}

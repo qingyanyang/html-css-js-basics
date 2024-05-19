@@ -1,0 +1,3 @@
+rgb(red, green, blue) rgba(red, green, blue, alpha)
+color: rgb(255, 0, 0); /* 不透明的纯红色 */
+color: rgba(0, 0, 255, 0.5); /* 半透明的蓝色 */

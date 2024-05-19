@@ -1,0 +1,11 @@
+display: none(隐藏) 不占用原来的位置
+display: block(不隐藏并转换为块级元素)
+
+visibility: hidden (隐藏) 占用原来的位置
+visibility: visible 
+
+相对于父容器
+overflow: hidden 
+overflow: visible
+overflow: scroll 不溢出都显示滚动条
+overflow: auto 需要时显示滚动条

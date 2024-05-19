@@ -1,0 +1,13 @@
+div {
+    background-color: #f2f2f2;
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; scroll */
+    background-position: 20px center;
+    background-size: cover;
+    background-clip: border-box;
+}
+
+div {
+    background: #f2f2f2 url('image.jpg') no-repeat fixed center center;
+}

@@ -1,0 +1,48 @@
+Inheritance
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            color: blue; /* 设置文本颜色为蓝色 */
+            font-family: Arial, sans-serif; /* 设置字体 */
+        }
+    </style>
+</head>
+<body>
+    <p>This paragraph will inherit the body's color and font family.</p>
+    <div>
+        <p>This paragraph will also inherit the color and font from the body.</p>
+    </div>
+</body>
+</html>
+
+<body> 元素中设置了文本颜色和字体。
+<p> 元素并没有显式设置这些属性，所以它们从 <body> 继承了文本颜色和字体。这显示了继承特性如何工作，确保文本元素保持一致的外观。
+text-, font-, line- color可以被自动继承
+
+Cascading and Specificity
+
+<h1 id="main-title" class="blue-text">Welcome to My Website!</h1>
+
+h1 {
+    color: orange !important;
+}
+
+h1 {
+    color: red;
+}
+
+.blue-text {
+    color: blue;
+}
+
+#main-title {
+    color: green;
+}
+
+h1 {
+    color: purple; /* 同一元素的另一规则 */
+}
+
+!important> style=""(inline style) > id selector > class, psoduo selector > element selector > */inheritance

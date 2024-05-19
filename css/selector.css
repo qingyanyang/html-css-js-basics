@@ -1,0 +1,31 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip::after {
+    content: "This is the tooltip text!";
+    position: absolute;
+    white-space: nowrap;/*控制文本换行, 保持文本完整性*/
+    bottom: 100%;
+    /* 将提示信息放置于元素上方 */
+    left: 50%;
+    /* 使提示信息在水平方向居中 */
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    /* 默认不可见 */
+    transition: opacity 0.3s;
+    /* 添加渐变效果使提示平滑显示 */
+    pointer-events: none;
+    /* 避免提示信息干扰鼠标事件 */
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    /* 悬停时使提示信息可见 */
+}
