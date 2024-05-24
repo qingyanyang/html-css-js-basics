@@ -1,0 +1,1 @@
+0, false, undefined, null, NAN, ‘’ 为false, 其余都为true

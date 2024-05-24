@@ -1,0 +1,18 @@
+function add(x, y) {
+  return x + y;
+}
+console.log(add(2, 3)); // 输出：5
+
+const subtract = function(x, y) {
+  return x - y;
+};
+
+console.log(subtract(5, 3)); // 输出：2
+
+const multiply = (x, y) => x * y;
+console.log(multiply(3, 4)); // 输出：12
+
+(function() {
+  const temp = "Hello World";
+  console.log(temp); // 输出：Hello World
+})();

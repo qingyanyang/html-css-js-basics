@@ -1,0 +1,79 @@
+push()：在数组的末尾添加一个或多个元素，并返回新的数组长度。
+pop()：删除数组的最后一个元素，并返回该元素。
+shift()：删除数组的第一个元素，并返回该元素。
+unshift()：在数组的开头添加一个或多个元素，并返回新的数组长度。
+
+splice()：通过删除现有元素和/或添加新元素来更改数组的内容。
+let numbers = [1, 2, 3, 4, 5];
+// 删除位置2的元素，并在该位置添加'三'和'四'
+numbers.splice(2, 1, '三', '四');
+console.log(numbers); // 输出：[1, 2, '三', '四', 4, 5]
+
+const letters = ['a', 'b', 'c'];
+letters.forEach(letter => console.log(letter));
+
+const numbers = [1, 2, 3, 4];
+const squares = numbers.map(num => num * num);
+console.log(squares); // 输出：[1, 4, 9, 16]
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const evens = numbers.filter(num => num % 2 === 0);
+console.log(evens); // 输出：[2, 4, 6]
+
+const numbers = [7, 8, 9, 10, 11, 12];
+const firstLargeNumber = numbers.find(num => num > 10);
+console.log(firstLargeNumber); // 输出：11
+
+const fruits = ['apple', 'banana', 'mango'];
+console.log(fruits.includes('banana')); // 输出：true
+console.log(fruits.includes('cherry')); // 输出：false
+
+const numbers = [1, 2, 3, 4, 5];
+const part = numbers.slice(1, 3);
+console.log(part); // 输出：[2, 3]
+
+
+forEach()：遍历数组的每个元素，执行提供的函数。
+map()：创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后的返回值。
+filter()：创建一个新数组，包含通过所提供函数测试的所有元素。
+reduce()：对数组中的每个元素执行一个由您提供的“reducer”函数（升序执行），将其结果汇总为单个返回值。
+
+const numbers = [1, 2, 3, 4, 5];
+const total = numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+}, 0); // 初始值为 0
+console.log(total); // 输出：15
+
+
+const items = [
+    { name: 'Apple', quantity: 2 },
+    { name: 'Banana', quantity: 3 },
+    { name: 'Orange', quantity: 1 }
+];
+const totalQuantity = items.reduce((accumulator, item) => {
+    return accumulator + item.quantity;
+}, 0); // 初始值为 0
+console.log(totalQuantity); // 输出：6
+
+
+const fruits = ['apple', 'banana', 'orange'];
+const fruitCounts = fruits.reduce((accumulator, fruit) => {
+    if (!accumulator[fruit]) {
+        accumulator[fruit] = 1; // 如果对象中没有这个水果，初始化为 1
+    } else {
+        accumulator[fruit]++; // 如果有，数量加 1
+    }
+    return accumulator;
+}, {});
+console.log(fruitCounts); // 输出：{ apple: 1, banana: 1, orange: 1 }
+
+const grades = [87, 94, 45, 63, 77, 89, 91];
+const maxGrade = grades.reduce((accumulator, currentValue) => {
+    return (currentValue > accumulator) ? currentValue : accumulator;
+}, grades[0]); // 初始值设为数组的第一个元素
+console.log(maxGrade); // 输出：94
+
+return的值作为下一个accumulator吗
+是的，你的理解是正确的。在 reduce() 方法中，每次调用“reducer”函数返回的值会作为下一次调用该函数时的第一个参数（累加器 accumulator）。
+
+这样，你可以在每一步都基于前一步的结果构建新的结果。整个过程从数组的第一个元素开始，一直到最后一个元素，最终 reduce() 返回的是最后一次函数调用的返回值。

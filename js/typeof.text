@@ -1,0 +1,10 @@
+在 JavaScript 中，typeof 操作符可以用来检测试一个变量或表达式的类型。它可以返回以下几种字符串：
+
+"undefined"：如果变量没有被定义。
+"boolean"：如果值是布尔值（true 或 false）。
+"number"：如果值是数字。
+"string"：如果值是字符串。
+"symbol"：如果值是符号（ES6 引入的新类型）。
+"object"：如果值是一个对象（包括数组和 null）。
+"function"：如果值是函数。
+值得注意的是，虽然 null 是一个对象类型的特殊值，但 typeof null 会返回 "object"，这实际上是一个历史遗留的错误。

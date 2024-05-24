@@ -1,0 +1,43 @@
+const object = {};
+object.newProp = "I'm new here";  // 添加新属性
+console.log(object);  // 输出：{ newProp: "I'm new here" }
+
+const object = { removeMe: "delete this property" };
+delete object.removeMe;  // 删除属性
+console.log(object);  // 输出：{}
+
+
+const object = { readMe: "You can see me" };
+console.log(object.readMe);  // 点符号访问，输出："You can see me"
+console.log(object['readMe']);  // 方括号访问，输出："You can see me"
+
+
+if ('readMe' in object) {
+    console.log(object.readMe);  // 只有当属性存在时才输出
+} else {
+    console.log("Property does not exist");
+}
+
+const object = { updateMe: "Initial value" };
+object.updateE = "Updated value";  // 更新属性值
+console.log(object);  // 输出：{ updateMe: "Updated value" }
+
+
+const person = { name: "Alice", age: 25, city: "New York" };
+Object.keys(person).forEach(key => {
+    console.log(key, person[key]);
+});
+
+
+const person = { name: "Alice", age: 25, city: "New York" };
+Object.values(person).forEach(value => {
+    console.log(value);
+});
+
+const person = { name: "Alice", age: 25, city: "New York" };
+for (const [key, value] of Object.entries(person)) {
+    console.log(`${key}: ${value}`);
+}
+
+
+

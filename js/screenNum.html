@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            
+            table, th, td, caption{
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+
+            caption{
+                border-bottom: none;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <script>    
+        let price = +prompt('enter price:');
+        let quantity = +prompt('enter quantity:');
+        let address = prompt('enter address:');
+        let total = price*quantity;
+        document.write(
+            `
+<table>
+            <caption>Order Confirmation</caption>
+            <thead>
+                <th>name</th>
+                <th>price</th>
+                <th>quantity</th>
+                <th>total price</th>
+                <th>address</th>
+            </thead>
+            <tbody>
+                <td>xiaomi</td>
+                <td>$${price}</td>
+                <td>${quantity}</td>
+                <td>$${total}</td>
+                <td>${address}</td>
+            </tbody>
+        </table>
+            `
+        );
+
+        </script>
+    </body>
+</html>
