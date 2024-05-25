@@ -1,0 +1,97 @@
+用户界面事件
+load：当页面完全加载后触发（包括所有资源如样式表和图片）。
+unload：当页面被卸载时触发。
+resize：当窗口或框架的大小变化时触发。
+scroll：当用户滚动指定的元素时触发。
+焦点事件
+focus：当元素获得焦点时触发。
+blur：当元素失去焦点时触发。
+鼠标事件
+click：当用户点击元素时触发。
+dblclick：当用户双击元素时触发。
+mousedown：当鼠标按钮被按下时触发。
+mouseup：当鼠标按钮被释放时触发。
+mouseover：当鼠标移到元素上时触发。
+mouseout：当鼠标从元素上移开时触发。
+mousemove：当鼠标指针在元素内部移动时触发。
+键盘事件
+keydown：当用户按下键盘上的任何键时触发，持续按键时重复触发。
+keypress：当用户按下键盘上的字符键时触发，持续按键时重复触发（注意：许多现代浏览器已不推荐使用）。
+keyup：当用户释放键盘上的键时触发。
+表单事件
+submit：当表单提交时触发。
+change：当表单元素的值发生变化时触发。
+input：当 input 或 textarea 的值发生变化时实时触发。
+触摸事件
+touchstart：当手指触摸屏幕时触发。
+touchmove：当手指在屏幕上滑动时连续触发。
+touchend：当手指从屏幕上离开时触发。
+拖放事件
+drag：当元素或选取的文本被拖动时触发。
+dragstart：当拖动操作开始时触发。
+dragend：当拖放操作结束（通过释放鼠标按钮或击键）时触发。
+dragenter：当拖动的元素或选取的文本进入有效的放置目标时触发。
+dragleave：当拖动的元素或选取的文本离开有效的放置目标时触发。
+dragover：当元素或选取的文本在有效的放置目标上时触发。
+drop：当元素或选取的文本在有效的放置目标上释放时触发。
+
+element.addEventListener('click', function(event) {
+    console.log('Element clicked!');
+});
+
+
+1. Click 事件
+最常用的鼠标事件之一，用于响应用户点击操作。
+const button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+    alert('Button clicked!');
+});
+
+
+2. Mouseover 和 Mouseout 事件
+这两个事件经常用来改变元素的样式，例如当鼠标悬停在某个元素上时显示信息，或者改变元素颜色。
+
+const hoverDiv = document.getElementById('hoverDiv');
+hoverDiv.addEventListener('mouseover', function() {
+    hoverDiv.style.backgroundColor = 'blue';
+});
+hoverDiv.addEventListener('mouseout', function() {
+    hoverDiv.style.backgroundColor = 'red';
+});
+
+
+3. Load 事件
+load 事件在页面完全加载后触发，包括所有资源，如图片、样式表等。
+
+window.addEventListener('load', function() {
+    console.log('All resources finished loading!');
+});
+
+
+4. DOMContentLoaded 事件
+当初始的 HTML 文档被完全加载和解析完成后触发，不需要等待样式表、图片和子框架完成加载。
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Document is ready and can be manipulated!');
+});
+
+5. Resize 事件
+当窗口或一个框架被重新调整大小时触发。
+window.addEventListener('resize', function() {
+    console.log('Window size changed!');
+});
+
+6. Submit 事件
+用于表单提交时触发，通常用于验证表单数据。
+const form = document.getElementById('myForm');
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // 阻止表单默认提交行为
+    console.log('Form submitted!');
+});
+
+
+7. Scroll 事件
+当用户滚动指定的元素时触发，用于创建“懒加载”图片、无限滚动或滚动性能优化。
+window.addEventListener('scroll', function() {
+    console.log('Scrolled!');
+});
