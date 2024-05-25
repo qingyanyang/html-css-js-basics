@@ -1,0 +1,3 @@
+obj.classList.add('active')
+obj.classList.remove('active')
+obj.classList.toggle('active') if exists? remove: add

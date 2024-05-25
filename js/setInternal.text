@@ -1,0 +1,10 @@
+
+windows.setInterval(func, intervalTime)
+
+
+setInterval(()=>{
+    console.log(once a second);
+},1000);
+
+
+
