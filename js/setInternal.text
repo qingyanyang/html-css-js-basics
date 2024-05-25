@@ -2,9 +2,13 @@
 windows.setInterval(func, intervalTime)
 
 
-setInterval(()=>{
+const id = setInterval(()=>{
     console.log(once a second);
 },1000);
 
 
+const timeId = setTimeout(()=>{
+clearInterval(id);
+},5000);
 
+clearTimeout(timeId);
