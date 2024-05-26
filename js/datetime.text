@@ -1,0 +1,98 @@
+new Date()：创建一个新的 Date 对象。如果没有参数，它将返回当前的日期和时间。new Date()：创建一个新的 Date 对象。如果没有参数，它将返回当前的日期和时间。
+
+let now = new Date();
+console.log(now);
+
+new Date(year, month, day, hours, minutes, seconds, milliseconds)：创建一个具体日期和时间的 Date 对象。月份从 0 开始（0 代表一月）。
+
+let specificDate = new Date(2024, 0, 1, 12, 30, 15);  // January 1, 2024, 12:30:15
+console.log(specificDate);
+
+new Date(milliseconds)：根据自 1970 年 1 月 1 日（UTC）以来的毫秒数创建日期对象。
+
+let dateFromString = new Date('2024-01-01T12:30:00');
+console.log(dateFromString);
+
+getDate()：返回月份的某一天（1-31）。
+getMonth()：返回月份（0-11）。
+getFullYear()：返回年份。
+getHours()：返回小时（0-23）。
+getMinutes()：返回分钟（0-59）。
+getSeconds()：返回秒数（0-59）。
+getMilliseconds()：返回毫秒数（0-999）。
+getDay()：返回星期几（0-6，0 代表周日）。
+
+setDate()：设置月份的某一天。
+setMonth()：设置月份。
+setFullYear()：设置年份。
+setHours()：设置小时。
+setMinutes()：设置分钟。
+setSeconds()：设置秒数。
+**://设置秒数。
+setMilliseconds()：设置毫秒数。
+
+
+示例 1：创建当前日期和时间的 Date 对象
+let now = new Date();
+console.log(now.toString());  // 输出当前日期和时间，格式依环境而定
+//Sun May 14 2023 15:20:10 GMT+0200 (Central European Summer Time)
+
+示例 2：创建特定日期和时间的 Date 对象
+let specificDate = new Date(2024, 0, 1, 12, 30, 15);
+console.log(specificDate.toString());  // 输出 "Wed Jan 01 2024 12:30:15 GMT+0100 (Central European Standard Time)"
+//Wed Jan 01 2024 12:30:15 GMT+0100 (Central European Standard Time)
+
+let dateParts = new Date('2024-06-15T12:00:00Z');
+console.log(`Year: ${dateParts.getFullYear()}`);  // 年份
+console.log(`Month: ${dateOfspecificDate.getMonth()}`);  // 月份，从0开始
+console.log(`Day: ${dateOfspecificDate.getDate()}`);  // 月份中的日
+console.log(`Day of the Week: ${dateParts.getDay()}`);  // 星期几，0 表示周日
+
+Year: 2024
+Month: 5
+Day: 15
+Day of the Week: 6
+
+let setDateExample = new Date();
+setDateExample.setFullYear(2025);
+setDateExample.setMonth(11);  // 设置为12月（月份从0开始）
+setDateExample.setDate(25);  // 设置为25日
+console.log(setDateExample.toString());
+
+Thu Dec 25 2025 15:22:30 GMT+0100 (Central European Standard Time)
+
+let christmas2024 = new Date(2024, 11, 25);
+let newYearsEve2024 = new Date(2024, 11, 31);
+console.log('Is Christmas before New Year\'s Eve?', christmas2024 < newYearsEve2024);
+
+Is Christmas before New Year's Eve? true
+
+
+
+
+
+const event = new Date('2023-05-14T12:00:00');
+
+// 不带参数，默认使用运行环境的地区设置
+console.log(event.toLocaleString());  
+
+// 指定使用德语（德国）
+console.log(event.toLocaleString('de-DE'));
+
+// 使用选项自定义输出格式
+console.log(event.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+
+
+const number = 123456.789;
+
+// 默认本地格式
+console.log(number.toLocaleEString());  
+
+// 德语用作本地化数字（德国）
+console.log(number.toLocaleString('de-DE'));
+
+// 使用选项自定义输出格式
+console.log(number.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }));
+
+
+
