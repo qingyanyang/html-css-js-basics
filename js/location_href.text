@@ -1,0 +1,49 @@
+windows.location.href can set and get link of browser
+
+location.reload(true)
+
+location.search ?后面的内容
+loaction.hash #后面的内容
+
+
+在 Web 开发中，navigator 对象是一个非常重要的部分，它是浏览器提供的一个内置对象，包含了许多属性和方法，用于获取关于用户的浏览器信息和执行与浏览器相关的操作。navigator 对象属于 BOM（Browser Object Model）的一部分，可以在全局执行环境中直接访问，不需要任何额外的导入或声明。
+
+navigator 对象的主要作用和功能：
+浏览器检测：
+
+可以通过 navigator 对象获取用户浏览器的名称、版本、操作系统等信息，这些信息通常通过 navigator.userAgent、navigator.appName、navigator.appVersion 等属性提供。这使得开发者可以根据不同的浏览器特性或缺陷来调整网页的行为或样式。
+功能检测：
+
+navigator 对象可以用来检测浏览器支持哪些功能，如 Java、Cookies、HTML5 特性等。例如，使用 navigator.cookieEnabled 可以检查浏览器是否启用了 cookie 支持。
+网络状态：
+
+使用 navigator.onLine 属性，可以检测用户的设备是否连接到了网络。
+地理位置：
+
+navigator.geolocation API 允许开发者获取用户的地理位置信息，当然，这需要用户的许可。通过这个 API，网站可以提供定位服务，如地图定位、位置相关的搜索结果等。
+多媒体功能：
+
+通过 navigator.mediaDevices API（包括访问摄像头和麦克风），网页可以捕捉音频和视频，这在创建视频聊天应用或拍照功能时特别有用。
+性能优化和分析：
+
+navigator 对象提供了 navigator.hardwareConcurrency 属性，它可以告知开发者 CPU 的核心数，这有助于进行针对性的性能优化。
+推送通知和后台同步：
+
+navigator 对象还可以用来管理推送通知（Push API）和后台数据同步（Background Sync API）。
+示例代码：
+javascript
+Copy code
+if (navigator.onLine) {
+  console.log('浏览器在线');
+} else {
+  console.log('浏览器离线');
+}
+
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(position => {
+    console.log('Latitude:', position.coords.latitude);
+    console.log('Longitude:', position.coords.longitude);
+  });
+}
+
+console.log('CPU 核心数:', navigator.hardwareConcurrency);

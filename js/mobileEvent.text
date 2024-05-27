@@ -1,0 +1,12 @@
+const element = document.getElementById('touchable-element');
+element.addEventListener('touchstart', function(event) {
+    console.log('Touch started:', event.touches);
+});
+
+window.addEventListener('orientationchange', function() {
+    console.log('Orientation changed to:', screen.orientation);
+});
+
+touchmove: 当手指在屏幕上移动时触发，这一事件会持续触发直到移动停止。
+touchend: 当手指从屏幕上抬起时触发。
+touchcancel: 当触摸事件被系统取消时触发（比如电话打进来或者弹窗出现时）。

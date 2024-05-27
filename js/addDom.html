@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="parent">
+
+        </div>
+        <script>
+            const li = document.createElement('li');
+            const div = document.querySelector('.parent');
+            // 1. appendChild
+            // 用途：将一个节点添加到指定父节点的子节点列表的末尾。
+            // const parentElement = document.getElementById('parent');
+            // const newElement = document.createElement('div');
+            // newElement.textContent = 'Hello, World!';
+            // parentElement.appendChild(newElement);
+            // 2. insertBefore
+            // 用途：在参考节点（reference node）之前插入一个节点作为指定父节点的子节点。
+            // const parentElement = document.getElementById('parent');
+            // const newElement = document.createElement('span');
+            // newElement.textContent = 'Insert me!';
+            // const referenceElement = document.getElementById('reference');
+            // parentElement.insertBefore(newElement, referenceElement);
+            // 3. insertAdjacentHTML
+            // 用途：将文本作为 HTML 解析，并插入到元素的指定位置。
+            // 参数：
+            // 'beforebegin': 在元素本身之前。
+            // 'afterbegin': 在元素内部，作为第一个子节点。
+            // 'beforeend': 在元素内部，作为最后一个子节点。
+            // 'afterend': 在元素本身之后。
+            // 4. insertAdjacentElement
+            // 用途：在指定的位置插入元素。
+            // 参数：与 insertAdjacentHTML 相同。
+            // const element = document.getElementById('element');
+            // const newElement = document.createElement('div');
+            // newElement.textContent = 'New Element';
+            // element.insertAdjacentElement('beforebegin', newElement);
+            // 5. replaceChild
+            // 用途：替换父节点下的一个子节点。
+            // const parentElement = document.getElementById('parent');
+            // const newElement = document.createElement('section');
+            // newElement.textContent = 'Replaced Section';
+            // const oldElement = document.getElementById('oldElement');
+            // parentElement.replaceChild(newElement, oldElement);
+            // 使用 cloneNode()
+            // 这个方法接受一个布尔参数，用来指定是否进行深度复制：
+
+            // true：进行深度复制，复制节点以及其整个子节点树。
+            // false 或不提供参数：只复制该节点本身，不包括它的子节点。
+
+            // const parent = document.getElementById('parent');
+            // const child = document.getElementById('child');
+
+            // // 移除子节点
+            // const removedChild = parent.removeChild(child);
+
+            // console.log('Removed:', removedChild);
+
+
+
+        </script>
+    </body>
+</html>
