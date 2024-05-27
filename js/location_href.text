@@ -47,3 +47,18 @@ if (navigator.geolocation) {
 }
 
 console.log('CPU 核心数:', navigator.hardwareConcurrency);
+
+history
+
+function goBack() {
+    history.back();
+}
+
+function goForward() {
+    history.forward();
+}
+
+function goToPage(index) {
+    history.go(index);
+}
+

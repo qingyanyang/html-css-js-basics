@@ -1,0 +1,86 @@
+1. localStorage
+localStorage 提供了一种方式在用户浏览器中存储数据，而这些数据没有过期时间，会一直保存在浏览器中直到被明确清除，或者用户清除浏览器缓存。
+
+特点：
+
+数据永久存储，除非被用户或者程序清除。
+容量较大，大约 5MB。
+仅在客户端之间共享，不随每次请求发送到服务器。
+
+// 存储数据
+localStorage.setItem('username', 'JohnDoe');
+
+// 获取数据
+var user = localStorage.getItem('username');
+console.log(user);
+
+// 删除数据
+localStorage.removeItem('username');
+
+// 清除所有数据
+localStorage.clear();
+
+2. sessionStorage
+sessionStorage 类似于 localStorage，不同之处在于存储的数据只在页面会话期间可用。当用户关闭浏览器标签或窗口后，存储的数据将被删除。
+
+特点：
+
+数据在页面会话期间持续存在，关闭标签或窗口后消失。
+容量约为 5MB。
+数据不在不同的标签页、窗口或浏览器实例间共享。
+
+// 存储数据
+sessionStorage.setItem('sessionName', 'SessionData');
+
+// 获取数据
+var sessionData = sessionStorage.getItem('sessionName');
+console.log(sessionData);
+
+// 删除数据
+sessionstorage.removeItem('sessionName');
+
+// 清除所有数据
+sessionStorage.clear();
+
+3. Cookies
+Cookies 是小型文本文件，由网站保存在用户的计算机中。它们通常用于保持用户的会话和状态跨页面访问和浏览器会话。
+
+特点：
+
+可以设置过期时间。
+每次请求时自动发送到服务器，适用于身份验证等。
+容量较小，每个 cookie 大约 4KB。
+
+// 设置 cookie
+document.cookie = "username=JohnDoe; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+
+// 获取 cookie
+var x = document.cookie;
+console.log(x);
+
+// 删除 cookie 通过设置过期时间为过去的某个时间
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+使用场景：
+localStorage: 保存用户偏好设置，如主题颜色或布局选择，无需跨会话保持。
+sessionCtorage: 用于存储在单个会话中需要持续的状态，例如一个在线应用程序的用户输入或购物车内容。
+Cookies: 维护用户登录状态或跟踪用户行为（通过设置在每次请求中被发送到服务器的 cookies）。
+
+const obj = {
+    name:'pink',
+    age:18,
+    gender: female
+}
+
+localStorage.setItem('obj', JSON.stringify(obj))
+
+const obj = JSON.parse(localStorage.getItem('obj'))
+
+特点
+非对象值：如果 JSON.stringify() 方法中传递的是非对象值（如字符串、数字、布尔值），它会直接将值转换为相应的 JSON 字符串。
+日期对象：对于 Date 对象，JSON.stringify() 将其转换为 ISO 格式的日期字符串（例如："2021-06-29T09:12:33.123Z"）。
+不可枚举属性和函数：这些不会包含在结果中。
+循环引用：如果对象中存在循环引用，JSON.stringify() 会抛出错误，因为标准的 JSON 不支持这种引用。
+
+JSON (JavaScript Object Notation)
+描述：一种轻量级的数据交换格式，易于人阅读和编写，同时也易于机器解析和生成。JSON 格式的字符串通常用于网络通信和配置文件。
+"{\"name\":\"John\", \"age\":30, \"city\":\"New York\"}"
