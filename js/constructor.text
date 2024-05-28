@@ -1,0 +1,9 @@
+function Pig(uname, age){
+    this.name = uname
+    this.age = age
+}
+
+const obj = new Pig('hello',18)
+//obj={name:'hello',age:18}
+
+const obj2 = new Pig('hello2',17)

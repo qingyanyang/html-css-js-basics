@@ -1,0 +1,22 @@
+function Pig(name){
+    this.name = name;
+}
+
+Pig.eyes = 2
+
+Pig.sayHi = function(){
+    console.log(this)
+}
+
+
+Object static function
+
+const o = {name:'hello', age:6}
+
+Object.keys(o)
+Object.values(o)
+
+let oo={}
+
+Object.assign(oo,o);
+Object.assign(o,{gender:'male'});

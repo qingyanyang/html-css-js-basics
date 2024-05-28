@@ -1,0 +1,44 @@
+//arr
+const [max, min, avg] = [100,60,80]
+
+let a = 1;
+let b = 2;
+[b,a]=[a,b];
+
+
+//必须加加分号的情况
+1.(function(){})();
+(function(){})();
+
+2. array []开头有操作的时候&&前面有其他代码
+let a = 1
+let b = 2;
+[b,a]=[a,b]
+
+let a = 'aaa';
+[1,2,3].forEach((item)=>{console.log(item)})
+
+
+// 剩余参数装值
+
+const [a,b,...c] = [1,2,3,4,5,6,7,8]
+a=>1
+b=>2
+c=>[3,4,5,6,7,8]
+
+const [a=0,b=0]=[1,2]
+const [a=0,b=0]=[] // 防止undefined
+
+const [a,b,,d]=[1,2,3,4]
+a=>1
+b=>2
+c=>4
+
+const [a,b,c] = [1,2,[3,4]]
+c=>[3,4]
+
+// obj
+const {name,age}={name:'hello',age:18}
+attributes name has to be the same
+const {name:username,age}={name:'hello',age:18}
+username=>'hello'
