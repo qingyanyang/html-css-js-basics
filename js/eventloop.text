@@ -1,0 +1,7 @@
+call stack for executing Synchronous functions
+
+when meet asychronous functions will pass them to browers to solve,
+
+brower will put the callbacks to message queue for waiting( wait main stream call stack functions excuted completed)
+
+event loop is in charge of checking if call stack is empty, if empty, go to message queue to put callback to call stack for execution.
