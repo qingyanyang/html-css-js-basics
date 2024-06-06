@@ -279,3 +279,34 @@ fetch('https://api.example.com/data') // 这个api就是返回的Promise对象
     .catch(error => {
         console.error('发生错误:', error);
     });
+
+const promise2 = new MyPromise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('成功的数据');
+    }, 1000);
+});
+
+promise2.then((value) => {
+    console.log('第一次 then 成功:', value);
+    return '处理后的数据';
+});
+
+promise2.then((value) => {
+    console.log('第二次 then 成功:', value);
+});
+
+const fetchData1 = fetch('https://api.example.com/data1').then(response => response.json());
+const fetchData2 = fetch('https://api.example.com/data2').then(response => response.json());
+const fetchData3 = fetch('https://api.example.com/data3').then(response => response.json());
+
+Promise.all([fetchData1, fetchData2, fetchData3])
+    .then((values) => {
+        const [data1, data2, data3] = values;
+        console.log('所有数据已成功加载:', data1, data2, data3);
+    })
+    .catch((error) => {
+        console.error('发生错误:', error);
+    });
+
+
+
